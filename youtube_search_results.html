@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube 搜索結果</title>
+    <style>
+        body { 
+            font-family: '微軟正黑體', 'Arial', sans-serif; 
+            line-height: 2; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 30px; 
+            background-color: #f9f9f9;
+            font-size: 20px; /* 增大基本字体大小 */
+            color: #333;
+        }
+        .search-header {
+            background-color: #005CAA; /* 更深的蓝色，提高对比度 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .search-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            background-color: #28A745; /* 明亮的绿色 */
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px; /* 增大点击区域 */
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+        .nav-link:hover {
+            background-color: #218838;
+        }
+        .search-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .keywords-section {
+            width: 100%;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 25px;
+        }
+        .keywords-section h2 {
+            font-size: 24px;
+            color: #005CAA;
+        }
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .video-card { 
+            background-color: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .video-card:hover {
+            transform: scale(1.03);
+        }
+        .video-title {
+            color: #1A73E8; /* 更明亮的蓝色 */
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .video-details {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .link-button {
+            display: inline-block;
+            background-color: #DC3545; /* 明亮的红色 */
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+        .link-button:hover {
+            background-color: #C82333;
+        }
+        /* 已访问链接样式 */
+        .link-button.visited {
+            background-color: #6C757D; /* 灰色表示已访问 */
+            cursor: default;
+        }
+        /* 响应式设计，在小屏幕上调整 */
+        @media screen and (max-width: 1024px) {
+            .video-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .video-card {
+                width: 100%;
+            }
+            body {
+                font-size: 18px;
+                padding: 15px;
+            }
+            .nav-link, .link-button {
+                font-size: 18px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="search-header">
+        <h1>YouTube 搜索結果</h1>
+        <p>搜索時間: 2025-01-07 20:53:43</p>
+    </div>
+    
+    <div class="nav-links">
+        <a href="#一口氣_武俠" class="nav-link">一口氣 武俠</a>
+        <a href="#一口氣_古裝" class="nav-link">一口氣 古裝</a>
+        <a href="#一口氣_仙俠" class="nav-link">一口氣 仙俠</a>
+        <a href="#說劇" class="nav-link">說劇</a>
+    </div>
+    
+    <div class="search-results">
+        <div class="keywords-section" id="一口氣_武俠">
+            <h2>關鍵字: 一口氣 武俠</h2>
+            <p>找到 68 部影片</p>
+            <div class="video-list">
+            <div class="video-card">
+                <h3 class="video-title">2024最新爆火古裝劇，一口氣看完【流水迢迢】1~40全集完整版，任嘉倫 、李蘭迪古裝武俠劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 42,803</p>
+                    <p><strong>影片時長:</strong> 2小時40分30秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=CAU7aA9E5_0" id="一口氣_武俠_video_1" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【少年白馬醉春風】1~40全集完整版，2024最新漫改古裝武俠劇，侯明昊、何與、胡連馨新劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 154,127</p>
+                    <p><strong>影片時長:</strong> 3小時15分13秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Y1gIkX4-aZQ" id="一口氣_武俠_video_2" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完 神仙姐姐劉亦菲【神鵰俠侶】金庸經典武俠劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 抹茶追剧</p>
+                    <p><strong>觀看次數:</strong> 250,883</p>
+                    <p><strong>影片時長:</strong> 1小時37分58秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Kd0HPpiFMuo" id="一口氣_武俠_video_3" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠，13分鐘完全版，最被低估的一部武俠電影。</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 热爱咖啡的老Li</p>
+                    <p><strong>觀看次數:</strong> 6,120</p>
+                    <p><strong>影片時長:</strong> 12分35秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=LUe3fWaiXuA" id="一口氣_武俠_video_4" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《新蜀山劍俠》，陰山天尊霸氣歸來，誰料竟栽在了一個無名之輩手中！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 30,883</p>
+                    <p><strong>影片時長:</strong> 1小時21分13秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=650Yzl5tKoE" id="一口氣_武俠_video_5" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【神鵰俠侶】1~32集全劇完整版，古天樂李若彤，金庸經典武俠小說</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 105,161</p>
+                    <p><strong>影片時長:</strong> 3小時6分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=J1FKfzGtJPY" id="一口氣_武俠_video_6" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《薛仁貴傳奇》全集，經典古裝武俠劇，薛仁貴霸氣歸來 #影视 #影视解说 #剧情 #剧情片 #人性</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老龐探劇</p>
+                    <p><strong>觀看次數:</strong> 2,622</p>
+                    <p><strong>影片時長:</strong> 2小時50分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ktInyYBi0LY" id="一口氣_武俠_video_7" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝武俠劇《笑傲江湖》上集！爭做武林第一的東方不敗，竟然是女子！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 3,272</p>
+                    <p><strong>影片時長:</strong> 53分3秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=sGXeEYKh8go" id="一口氣_武俠_video_8" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完國產武俠經典《少年張三豐》，講述太極拳的演化和傳承</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 叨咯說影</p>
+                    <p><strong>觀看次數:</strong> 98,134</p>
+                    <p><strong>影片時長:</strong> 1小時21分25秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=y1bCTebQQik" id="一口氣_武俠_video_9" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《刀見笑》中集4分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 10,143</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/6sWqfdRFnv4" id="一口氣_武俠_video_10" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完2017年國產武俠《#射雕英雄傳》金庸經典武俠全集解说，史上最美黃蓉李一桐，#楊旭文#李一桐#陳星旭#孟子義</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小謝電影</p>
+                    <p><strong>觀看次數:</strong> 280,103</p>
+                    <p><strong>影片時長:</strong> 41分54秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Y0G-VY9sFyg" id="一口氣_武俠_video_11" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《七劍下天山》下集4分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 13,224</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/jhOO-fTDXwg" id="一口氣_武俠_video_12" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠天花板《蜀山傳》第二集4分鐘#張柏芝 #鄭伊健 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,223</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/rUt0Y1iv3rw" id="一口氣_武俠_video_13" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完金庸武俠經典《倚天屠龍計--魔教教主》第二集7分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 8,858</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/6RQ41M89ROE" id="一口氣_武俠_video_14" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠天花板《蜀山》第四集 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,566</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/043XBn5iV1A" id="一口氣_武俠_video_15" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《龍門花甲》第一集4分鐘解說#李連杰 #陳坤 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,649</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/CsTN7ok9Ut4" id="一口氣_武俠_video_16" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">李連傑武俠巔峰之作，一口氣看完《方世玉》全集</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武俠不止</p>
+                    <p><strong>觀看次數:</strong> 8,888</p>
+                    <p><strong>影片時長:</strong> 25分31秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=hRwrR5-uXrM" id="一口氣_武俠_video_17" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完目中無人2，謝苗再創武俠巔峰</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小滿侃電影</p>
+                    <p><strong>觀看次數:</strong> 935</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/9CvZgbQaxC8" id="一口氣_武俠_video_18" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠電影《四面埋伏》下集6分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 810</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/9RODAlGhtI4" id="一口氣_武俠_video_19" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《刀客》上集8分鐘解說 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,636</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/LWdevWVWZ3Y" id="一口氣_武俠_video_20" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【大陸】「武俠少女」！浙江一小女孩一口氣連做40個後空翻</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 天天看一廈</p>
+                    <p><strong>觀看次數:</strong> 2,883</p>
+                    <p><strong>影片時長:</strong> 15秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/xhFSSwstObM" id="一口氣_武俠_video_21" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《武當流雲》天命少年結緣武當山，因禍得福打通任督二脈，一手掌陰陽，步步成至尊，開啟屬於他的武林時代。</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 4,415</p>
+                    <p><strong>影片時長:</strong> 1小時11分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=1jl3kCc4UDA" id="一口氣_武俠_video_22" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠天花板《劍雨》下集10分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 2,427</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/t93G8FjxCzo" id="一口氣_武俠_video_23" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《鸚鵡殺手》一掌可斷江河，天下霸唱唯我獨尊！少年徒手抓江魚，練就霸氣絕世神功！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 153,465</p>
+                    <p><strong>影片時長:</strong> 4小時47分24秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=mY_Ou4Ewk-Y" id="一口氣_武俠_video_24" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠經典《武俠》下集7分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 612</p>
+                    <p><strong>影片時長:</strong> 7分10秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=LARvF6mjYV4" id="一口氣_武俠_video_25" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠天花板《劍雨》上集17分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 627</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/lXsriObjEfY" id="一口氣_武俠_video_26" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《刀見笑》上集6分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 909</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/WE5rs6t1_fc" id="一口氣_武俠_video_27" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《龍門花甲》第二集8分鐘解說#李連杰 #陳坤 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 568</p>
+                    <p><strong>影片時長:</strong> 8分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=fy2k9wefiaI" id="一口氣_武俠_video_28" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠電影《武俠》中集5分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 2,588</p>
+                    <p><strong>影片時長:</strong> 5分18秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Ae0GpBH6-TE" id="一口氣_武俠_video_29" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《六指琴魔》，寧靜版東方不敗，一把天魔琴殺崩五大門派！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 2,760</p>
+                    <p><strong>影片時長:</strong> 30分40秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=C7xAU3fP-Ls" id="一口氣_武俠_video_30" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完3小時熱血武俠漫《少年弓神》!【麦兜带你看漫画】</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 麦兜带你看漫画</p>
+                    <p><strong>觀看次數:</strong> 917</p>
+                    <p><strong>影片時長:</strong> 2小時42分39秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=go8Qo1_mgGM" id="一口氣_武俠_video_31" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《少年江龍》，少年繼承師傅絕世神功，懷著復仇之志。然仇敵却已駕鶴西去。一次意外將他捲入武林江湖，他將書寫屬於他的武林傳奇...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 12,439</p>
+                    <p><strong>影片時長:</strong> 1小時21分8秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=C58GXEG9yZc" id="一口氣_武俠_video_32" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠電影《四面埋伏》中集6分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 3,768</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/WFFlVY-ykek" id="一口氣_武俠_video_33" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《正派魔頭》，史上最衰魔頭，男人等待百年才當上教主，可掌教一月便不幸離世，醒來後發現...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 13,686</p>
+                    <p><strong>影片時長:</strong> 1小時19分14秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=97kwWbWeBbE" id="一口氣_武俠_video_34" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠經典《劍雨》，精彩不斷，26分鐘全解析！#劍雨 #武俠盛宴 #觀影心得</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老咸鱼影视</p>
+                    <p><strong>觀看次數:</strong> 5,234</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/562JMGN_q-c" id="一口氣_武俠_video_35" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">這才是經典武俠動作猛片，曾被央視循環播放，打鬥設計至今無人超越！ #一口氣看完 #武俠 #新冷血十三鷹</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 锦鲤娱塘</p>
+                    <p><strong>觀看次數:</strong> 21,405</p>
+                    <p><strong>影片時長:</strong> 10分43秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=0qDaF3I_H28" id="一口氣_武俠_video_36" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《七劍下天山》上集8分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,514</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/yJB9DGzRzyM" id="一口氣_武俠_video_37" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《刀見笑》下集5分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 4,423</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/TsFA9C2SxFU" id="一口氣_武俠_video_38" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠天花板《蜀山》第三集 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 922</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/R_-NqFT5dKk" id="一口氣_武俠_video_39" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《武俠》，被人瞧不起的農民，竟是隱世高手！ #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 渣叔說</p>
+                    <p><strong>觀看次數:</strong> 13,161</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/87B3mOzZxhs" id="一口氣_武俠_video_40" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠天花板《薯山傳》第一集 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,809</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/klNonRfL6NE" id="一口氣_武俠_video_41" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《亢龍有悔》少年出身劍術名門，卻喜文厭武，一心只想做個讀書人，這天偶遇老者贈送古書，命運的齒輪开始轉動......</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 67,534</p>
+                    <p><strong>影片時長:</strong> 2小時10分7秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9smp9LR1JN8" id="一口氣_武俠_video_42" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《龍門花甲》第三集5分鐘解說 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 1,219</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/ElobjMP_t4g" id="一口氣_武俠_video_43" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列：武俠爽漫《天光明月》。本是形影不離的兄妹，哥哥被迫從軍，妹妹卻淪為風塵女子。兄妹再見時如同陌生人....</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 3,025</p>
+                    <p><strong>影片時長:</strong> 1小時55分36秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=w_1FN93pReQ" id="一口氣_武俠_video_44" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠《蘇棄兒》中集4分鐘 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鋼蛋侃影</p>
+                    <p><strong>觀看次數:</strong> 3,099</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/Y6XQTThWNo8" id="一口氣_武俠_video_45" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《刀歌之短刀行》，廢柴小伙撿漏天下第一高手，意外成為武林盟主！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 1,483</p>
+                    <p><strong>影片時長:</strong> 27分38秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=qwyNCjSMNRk" id="一口氣_武俠_video_46" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《魔劍生死棋》，幾個自認無敵的男人爭奪武林盟主，結果沒一個能打的！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 1,995</p>
+                    <p><strong>影片時長:</strong> 1小時14分41秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=VjmpTyknBSg" id="一口氣_武俠_video_47" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《武當流雲》，少年墜入懸崖，大難不死，發現兩枚絕世寶物，遇兩隻上古神獸，最後獲神獸贈予陰陽雙氣....</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 7,025</p>
+                    <p><strong>影片時長:</strong> 2小時2分39秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=1PHTDABu9FA" id="一口氣_武俠_video_48" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完目中無人2，謝苗再創武俠巔峰 #电影 #电影解说 #影视 #影视解说 #剧情</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小滿侃電影</p>
+                    <p><strong>觀看次數:</strong> 1,143</p>
+                    <p><strong>影片時長:</strong> 9分7秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=XkOWE3ErR-4" id="一口氣_武俠_video_49" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列：武俠爽漫《天劍胖俠》，他是連走路都費勁的胖少爺，卻擔負拯救天下蒼生的使命......</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 3,232</p>
+                    <p><strong>影片時長:</strong> 42分45秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=nx7cunYFP5I" id="一口氣_武俠_video_50" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《看書稱霸武林》，少年擁有逆天能力，閱讀小說即能習得絕世武功，再練就天元無極功，便可成為武林至尊！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 11,787</p>
+                    <p><strong>影片時長:</strong> 31分15秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=n6GxnBh_o9U" id="一口氣_武俠_video_51" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《天下第一人》part2，何為天下第一人，他一掌可劈山河，一怒能斷大海，失憶的巔峰戰神到底有多厲害...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 3,325</p>
+                    <p><strong>影片時長:</strong> 1小時17分1秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=iDz54Hb3PT0" id="一口氣_武俠_video_52" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《少年武神》part1，少年為救姐姐而被人廢除全身筋脈，臨死之際偶遇神秘老者，傳授無敵神功。少年從此，一掌可稱霸武林，一怒則天地變色！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 2,319</p>
+                    <p><strong>影片時長:</strong> 1小時9分13秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Xt7PBq149YQ" id="一口氣_武俠_video_53" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《白蛇刺客》，少年日夜與毒蛇相伴，意外練就超凡神功。復仇之際，整個武林血雨腥風，一場浩劫悄然而至...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 9,181</p>
+                    <p><strong>影片時長:</strong> 1小時17分52秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=DdnStXHiDEg" id="一口氣_武俠_video_54" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《新少林五祖》，李連傑謝苗經典之作，如今再也找不到這麽好的武俠作品</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武俠不止</p>
+                    <p><strong>觀看次數:</strong> 19,758</p>
+                    <p><strong>影片時長:</strong> 11分23秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=XJpLbCAyius" id="一口氣_武俠_video_55" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《魔界之龍珠》，小男孩自幼與龍為伴，長大後竟能操控龍珠！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 529</p>
+                    <p><strong>影片時長:</strong> 58分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=pkKmEFebB4E" id="一口氣_武俠_video_56" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《笑傲僵湖》天下風雲出我輩,一入僵湖歲月催，深山中突然出現不死怪物，擁有鋼鐵之軀，戰力更是碾壓一派掌門......</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 884</p>
+                    <p><strong>影片時長:</strong> 1小時11分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=eTNMpAC_fA8" id="一口氣_武俠_video_57" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《少年武神》part2，少年為救姐姐而遭废除全身筋脉，臨死之際偶遇神秘老者，傳授無敵神功。從此少年一掌可稱霸武林，一怒則天地變色！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 1,295</p>
+                    <p><strong>影片時長:</strong> 55分10秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=a-qmFZIijHg" id="一口氣_武俠_video_58" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《南宮家小兒子》少年喜歡賣家裏的古董，一次暈倒意外覺醒天武之體，武林傳奇命運的齒輪開始轉動....</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 4,620</p>
+                    <p><strong>影片時長:</strong> 1小時4分7秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=-hwix2tt5mQ" id="一口氣_武俠_video_59" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《華山魔君》，老者在山洞中被困整整百年，因少年無心一語，一夜之間卻返老還童。原來，他曾是縱橫武林的魔君，如今卻落魄不堪，誓要報仇雪恨，展開復仇征程...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 43,959</p>
+                    <p><strong>影片時長:</strong> 48分10秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=x7kOoentYJ8" id="一口氣_武俠_video_60" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完武俠經典《劍雨》，全長26分鐘#一剪到底 #劍雨 #武俠 #我的觀影報告 #老咸鱼影视 #电影 #电影解说 #影视 #影视解说</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老咸鱼影视</p>
+                    <p><strong>觀看次數:</strong> 925</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/ZcZbrr8B1dw" id="一口氣_武俠_video_61" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《生死決》，看似文弱書生，竟是隱世絕頂高手。少年一現，猶如猛虎下山，無人能擋...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 7,100</p>
+                    <p><strong>影片時長:</strong> 1小時16分32秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ZyUhOFVXbyc" id="一口氣_武俠_video_62" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完 武俠漫畫《我的師兄太強了》</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 大俠·故事會</p>
+                    <p><strong>觀看次數:</strong> 950</p>
+                    <p><strong>影片時長:</strong> 4小時2分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=2WAbfXIKX3k" id="一口氣_武俠_video_63" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《華山魔拳》，少年瘸腿卻能日行千里，更把拳法練到極致，面對任何強敵只需一拳，真正做到拳傾天下！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 15,373</p>
+                    <p><strong>影片時長:</strong> 59分47秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=16NiKVicfuM" id="一口氣_武俠_video_64" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典武俠劇《太極宗師》，廢柴小伙奇遇連連，不僅習得太極之法，還當上了乘龍快婿！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 武侠小郎君</p>
+                    <p><strong>觀看次數:</strong> 2,974</p>
+                    <p><strong>影片時長:</strong> 1小時59分24秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=K9q0Wuaus6c" id="一口氣_武俠_video_65" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫超級奶爸《父無敵》，男人每天瘋狂挨打，卻練就無敵金身，本就天下無敵的他卻甘願當起保安，只為了能照顧三個熊寶寶...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 804</p>
+                    <p><strong>影片時長:</strong> 3小時48分42秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9XhjO2D7Rno" id="一口氣_武俠_video_66" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《天下第一人》，曾經天下第一的男人，失憶後，淪落為外賣小哥。面對強敵時，他逐漸覺醒體內強大的力量，與此同時痛苦的回憶也一步步解開...</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 1,498</p>
+                    <p><strong>影片時長:</strong> 1小時14分39秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=n3OdfB48B7s" id="一口氣_武俠_video_67" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看爽系列：武俠爽漫《少年武神》part3，少年為救姐姐而遭废除全身筋脉，臨死之際偶遇神秘老者，傳授無敵神功。從此少年一掌可稱霸武林，一怒則天地變色！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小豆说漫画</p>
+                    <p><strong>觀看次數:</strong> 6,025</p>
+                    <p><strong>影片時長:</strong> 3小時37分4秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=gzgBkixa9XQ" id="一口氣_武俠_video_68" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            </div>
+        </div>
+        <div class="keywords-section" id="一口氣_古裝">
+            <h2>關鍵字: 一口氣 古裝</h2>
+            <p>找到 54 部影片</p>
+            <div class="video-list">
+            <div class="video-card">
+                <h3 class="video-title">2024最新爆火古裝劇，一口氣看完【流水迢迢】1~40全集完整版，任嘉倫 、李蘭迪古裝武俠劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 42,818</p>
+                    <p><strong>影片時長:</strong> 2小時40分30秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=CAU7aA9E5_0" id="一口氣_古裝_video_1" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典古裝神話劇《宸汐緣》豆瓣評分7.5時長104分鐘，今生有你，今世足矣。此別一去，不復相憶。#电视剧解说 #宸汐緣</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 橘子解說 - Orange Commentary</p>
+                    <p><strong>觀看次數:</strong> 11,163</p>
+                    <p><strong>影片時長:</strong> 1小時44分12秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=SOxGWSgTRaA" id="一口氣_古裝_video_2" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">2024最新古裝懸疑劇【清明上河圖密碼】，一口氣看完1～26全集完整版，張頌文，白百何新劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 27,311</p>
+                    <p><strong>影片時長:</strong> 1小時30分59秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=0RzZaONepCs" id="一口氣_古裝_video_3" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">2024最新古裝神話劇，一口氣看完【饕餮人間】1～40全集完整版，電視劇解說，安悅溪、王佑碩、牛子藩、趙本山女兒網紅球球主演</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 58,240</p>
+                    <p><strong>影片時長:</strong> 1小時27分51秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=FnYYlZU2Kog" id="一口氣_古裝_video_4" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【與鳳行】1~39全集完整版，碧蒼王沈璃與上古神行雲的神話愛情，2024最新古裝神話劇，趙麗穎林更新</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 195,345</p>
+                    <p><strong>影片時長:</strong> 1小時51分15秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=1ag6AKVE4nY" id="一口氣_古裝_video_5" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完《浮圖緣》全集！】#陳鈺琪 撞破#王鶴棣 假太監身份 撲倒熱吻圓房！| 浮圖緣EP01-36 【歡迎訂閱小七古裝劇場】</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小七古裝劇場</p>
+                    <p><strong>觀看次數:</strong> 430,463</p>
+                    <p><strong>影片時長:</strong> 2小時45分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=BOhOsIeWlkY" id="一口氣_古裝_video_6" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝愛情劇《周生如故》與太子訂婚的漼家女，竟然愛上自己的師傅！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 67,792</p>
+                    <p><strong>影片時長:</strong> 1小時11分10秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=sOlRuRfsaUU" id="一口氣_古裝_video_7" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完穿越古裝劇《步步驚心》</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 喵柒柒剧场</p>
+                    <p><strong>觀看次數:</strong> 187,660</p>
+                    <p><strong>影片時長:</strong> 27分27秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=GEj4vfkCkHA" id="一口氣_古裝_video_8" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">韓劇《百日的郎君》一口氣看完，先婚後愛的一部古裝韓劇，D.O搭檔南志鉉出演</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小帥看劇</p>
+                    <p><strong>觀看次數:</strong> 182,848</p>
+                    <p><strong>影片時長:</strong> 57分35秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=eoSQQ5lvhT0" id="一口氣_古裝_video_9" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【劇】虞書欣、張凌赫領銜主演，一口氣看完最新古裝劇《雲之羽》全集</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 劇 - DRAMA</p>
+                    <p><strong>觀看次數:</strong> 66,088</p>
+                    <p><strong>影片時長:</strong> 52分51秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ArQOG1ZcAkU" id="一口氣_古裝_video_10" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝愛情劇《輝煌或瘋狂》，受詛咒的王子和傻白公主的淒美愛情故事</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小白白盘剧</p>
+                    <p><strong>觀看次數:</strong> 148,660</p>
+                    <p><strong>影片時長:</strong> 25分52秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=5bsq-M_1hx4" id="一口氣_古裝_video_11" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完韓國古裝劇《外星人》，太有樂趣了！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 月田电影</p>
+                    <p><strong>觀看次數:</strong> 2,986</p>
+                    <p><strong>影片時長:</strong> 17分59秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=cO749E6JMEs" id="一口氣_古裝_video_12" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝韓劇《三劍客》世子為鞏固朝堂，暗自除掉奸臣！！？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 8,449</p>
+                    <p><strong>影片時長:</strong> 45分29秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=t2tZc1dUBJU" id="一口氣_古裝_video_13" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【爆笑古裝劇】現代廚師小伙意外穿越到古代成立王后娘娘，一碗方便麵征服御膳房。【哲仁王后】</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 喵柒柒剧场</p>
+                    <p><strong>觀看次數:</strong> 5,008</p>
+                    <p><strong>影片時長:</strong> 36分5秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=QocFWK7Yuq0" id="一口氣_古裝_video_14" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【度華年】2024最新古裝穿越劇，權臣丈夫和毒舌妻子雙雙重生1~12集</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 2,559</p>
+                    <p><strong>影片時長:</strong> 33分34秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=LwfpOY3mSxU" id="一口氣_古裝_video_15" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">黑白雙夕攜手闖蕩天涯！一口氣看完愛情古裝劇《且試天下》。#古裝劇#愛情劇#劇情#全集解說#楊洋#趙露思#張豐毅#李若彤</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小碧看剧</p>
+                    <p><strong>觀看次數:</strong> 753</p>
+                    <p><strong>影片時長:</strong> 37分21秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=HXrSgr2sCXA" id="一口氣_古裝_video_16" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完國產古裝奇幻大劇，白鹿、許凱代表作《招搖》全劇60分鐘全程高能！港臺娛樂匯#白鹿#許凱</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 港台娱乐汇</p>
+                    <p><strong>觀看次數:</strong> 2,030</p>
+                    <p><strong>影片時長:</strong> 59分17秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=7ZXxyC0o9j0" id="一口氣_古裝_video_17" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝愛情劇《灼灼風流》下集！第一女探花與愛上智勇雙全的王爺！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 777</p>
+                    <p><strong>影片時長:</strong> 47分58秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=93ZtJ0OXJNs" id="一口氣_古裝_video_18" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《薛仁貴傳奇》全集，經典古裝武俠劇，薛仁貴霸氣歸來 #影视 #影视解说 #剧情 #剧情片 #人性</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老龐探劇</p>
+                    <p><strong>觀看次數:</strong> 674</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/Fd7LCy2cqeA" id="一口氣_古裝_video_19" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完經典古裝劇《羋月傳》，一個女人撐起了一片天，帶你領略羋月傳奇的一生。#电视剧解说 #芈月传 #孙俪 #刘涛 #黄轩</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 橘子解說 - Orange Commentary</p>
+                    <p><strong>觀看次數:</strong> 12,654</p>
+                    <p><strong>影片時長:</strong> 1小時6分44秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=d7DQXFVl0CA" id="一口氣_古裝_video_20" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完《雲襄傳》全集！】#陳曉 为爱破戒 #毛曉彤 步步淪陷！ 誰家男主一有機會就躲進女主懷裡求抱抱呀～嗑瘋了😍！ | 雲襄傳EP01-36 【歡迎訂閱小七古裝劇場】</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小七古裝劇場</p>
+                    <p><strong>觀看次數:</strong> 445,211</p>
+                    <p><strong>影片時長:</strong> 2小時53分</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=rquG6IyQv5Y" id="一口氣_古裝_video_21" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】古裝韓劇《女王自鳴鼓》流落民間的公主愛上王子！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 1,587</p>
+                    <p><strong>影片時長:</strong> 1小時1分13秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=KutIve5l8A0" id="一口氣_古裝_video_22" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完！ 古裝合集，我本事現代商業奇才，穿越回古代竟成了破產富二代，還好我聰明機智，靠遺產成為古代首富，就連天下第一美女也求著我睡她！#短劇#逆襲</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 尋夢追劇社</p>
+                    <p><strong>觀看次數:</strong> 5,544</p>
+                    <p><strong>影片時長:</strong> 6小時44分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=X77nIhom6Uc" id="一口氣_古裝_video_23" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列！ 現代女孩玩角色扮演穿越到千年前變蛇妖,她憑藉一己之力智鬥惡勢力扭轉結局,改寫人生,還獲得了皇子獨一無二的愛！💕#重生#穿越#爽劇#古裝#甜寵丨YY劇場</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> YY劇場</p>
+                    <p><strong>觀看次數:</strong> 2,564</p>
+                    <p><strong>影片時長:</strong> 4小時6分57秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=OpkBknOC0Z4" id="一口氣_古裝_video_24" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝愛情劇《且試天下》下集！黑白雙鳳的甜蜜愛戀！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 700</p>
+                    <p><strong>影片時長:</strong> 50分48秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=6ffnoZEVr9I" id="一口氣_古裝_video_25" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完《花戎 》全集！】#鞠婧禕 喜懷龍鳳胎！ 與#郭俊辰 奉子成婚 三世情緣宿命感好絕！| 花戎 EP01-36 【歡迎訂閱小七古裝劇場】</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小七古裝劇場</p>
+                    <p><strong>觀看次數:</strong> 556,734</p>
+                    <p><strong>影片時長:</strong> 2小時42分9秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=n6Oob3pBzX8" id="一口氣_古裝_video_26" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完古裝探案劇《御賜小仵作》！寶藏古裝劇，女仵作初見王爺，竟然想給他脫衣！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 无名剧场</p>
+                    <p><strong>觀看次數:</strong> 89,711</p>
+                    <p><strong>影片時長:</strong> 1小時3分14秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=_u_s5IXb-U8" id="一口氣_古裝_video_27" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝愛情劇《贅婿》上集！意外穿越的男人竟然成了贅婿？？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 694</p>
+                    <p><strong>影片時長:</strong> 54分34秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=NWpSHaPsDw0" id="一口氣_古裝_video_28" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完古裝神話劇《西遊記後傳》，小時候以為的爛片長大後看才知道是神作</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 叨咯說影</p>
+                    <p><strong>觀看次數:</strong> 2,118</p>
+                    <p><strong>影片時長:</strong> 1小時6分37秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=P6XUBQCekbo" id="一口氣_古裝_video_29" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">交換人生高能復仇，破局困鏡！一口氣看完古裝復仇劇《墨雨雲間》#全集解說#古裝#劇情#吳謹言#王星越#陳鑫海#陳喬恩#梁永棋</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小碧看剧</p>
+                    <p><strong>觀看次數:</strong> 509</p>
+                    <p><strong>影片時長:</strong> 1小時40分8秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=7SSy9Wg7GfI" id="一口氣_古裝_video_30" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【慶余年2】1~36全集完整版，范閑真正身份解密，2024最新古裝傳奇劇，張若昀、李沁、陳道明、郭麒麟新劇，慶余年第二季</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 417,933</p>
+                    <p><strong>影片時長:</strong> 1小時55分21秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Y7Y0c2QWq9A" id="一口氣_古裝_video_31" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】國產高分古裝武俠劇《笑傲江湖》上集！爭做武林第一的東方不敗，竟然是女子！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 3,272</p>
+                    <p><strong>影片時長:</strong> 53分3秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=sGXeEYKh8go" id="一口氣_古裝_video_32" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完穿越古裝短劇【史上第一紈綺】完整版:超級特工意外穿越異世成為地主家的傻兒子，剛好趕上被未婚妻羞辱退婚，看他如何憑藉現代知識完成逆襲#短劇 #drama</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 崑崙劇場</p>
+                    <p><strong>觀看次數:</strong> 2,842</p>
+                    <p><strong>影片時長:</strong> 2小時25分24秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=bTENnf8qRhA" id="一口氣_古裝_video_33" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看懸疑古裝劇1-7集《九義人》，吳倩李佳航喬振宇主演，九義人戰隊復仇之路扣人心絃#吳倩#電視劇九義人#最新古裝劇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 迷你剧场</p>
+                    <p><strong>觀看次數:</strong> 11,675</p>
+                    <p><strong>影片時長:</strong> 28分54秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=hN4lOdolEPc" id="一口氣_古裝_video_34" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">2024最新古裝神話劇，一口氣看完【饕餮人間】1～17集，電視劇解說，安悅溪、王佑碩、牛子藩、趙本山女兒網紅球球主演</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 悟空看劇</p>
+                    <p><strong>觀看次數:</strong> 5,287</p>
+                    <p><strong>影片時長:</strong> 35分28秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=AT9x6OtLI6E" id="一口氣_古裝_video_35" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝愛情劇《皓鑭傳》被後媽陷害的落魄千金，竟成為一國王后？？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 12,414</p>
+                    <p><strong>影片時長:</strong> 39分55秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ZJmYDkG46Ro" id="一口氣_古裝_video_36" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完奇幻古裝韓劇《風雲碑》劇情解说，巫女翁主与帅气占卜师的凄美爱情！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 酷魚的劇</p>
+                    <p><strong>觀看次數:</strong> 54,196</p>
+                    <p><strong>影片時長:</strong> 53分47秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=zAIirZstAs0" id="一口氣_古裝_video_37" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝愛情劇《長歌行》 上集！草原最傲的鷹騎上了長安最皎潔的月！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 6,679</p>
+                    <p><strong>影片時長:</strong> 29分52秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9i8RzVnuFZI" id="一口氣_古裝_video_38" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分奇幻古裝愛情劇《九家之書》家破人亡的女孩愛上半獸人！！？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 589</p>
+                    <p><strong>影片時長:</strong> 50分50秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=-QBHNgyMj9A" id="一口氣_古裝_video_39" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《大宋提刑官》，經典古裝懸疑劇，揭開宋末的官場黑暗 #影视 #影视解说 #剧情 #剧情片 #人性</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老龐探劇</p>
+                    <p><strong>觀看次數:</strong> 552</p>
+                    <p><strong>影片時長:</strong> 3小時23分5秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=eYJ_1yXefD4" id="一口氣_古裝_video_40" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列!古裝玄幻劇《天醒之路》廢材少年逆襲記!</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 动漫独播剧场</p>
+                    <p><strong>觀看次數:</strong> 1,958</p>
+                    <p><strong>影片時長:</strong> 30分47秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=zhksOLFKq1I" id="一口氣_古裝_video_41" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列！霸道總裁強制愛！ 萬年鐵樹高冷總裁倒追灰姑娘,灰姑娘即使有婚約也不嫁給他,霸總征服慾上頭誓要拿下她！💕#重生#穿越#爽劇#古裝#甜寵丨YY劇場</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> YY劇場</p>
+                    <p><strong>觀看次數:</strong> 624</p>
+                    <p><strong>影片時長:</strong> 2小時12分6秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ZuBhq1AgLKQ" id="一口氣_古裝_video_42" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完！【雙株訣】一株雙生的太歲，一陰一陽若能逆轉陰陽力量無窮，從此二者反目成仇，不死不休，爭鬥不止，誰能真正笑到最後#上癮劇場 #短劇推薦 #古裝 #仙俠</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 上癮劇場</p>
+                    <p><strong>觀看次數:</strong> 1,983</p>
+                    <p><strong>影片時長:</strong> 1小時40分41秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=NqRRLvvmryE" id="一口氣_古裝_video_43" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝韓劇《風雲碑》17歲的狀元郎被奸臣所陷害！！？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 883</p>
+                    <p><strong>影片時長:</strong> 40分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=CoZw10IMkHk" id="一口氣_古裝_video_44" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完2023年36部好評短劇！雖然小成本制作，但絕對是S+級的爽感！像是《成曦曲》《東欄雪》等頻繁上微博熱搜！現代、古裝、奇幻、穿越、仙俠等多部破億次觀看！小編很佩服有幾部的劇情實在牛！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 月亮說</p>
+                    <p><strong>觀看次數:</strong> 380,078</p>
+                    <p><strong>影片時長:</strong> 26分12秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=s2UWXqgk-Fg" id="一口氣_古裝_video_45" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">8部小成本好評「古裝短劇」！ 一口氣看完！ 嬌妻變喪屍的《風月變》！ 雙強美強慘設定的《東欄雪‎》！ 涵蓋了武俠、古偶、現偶、權謀、宅鬥、懸疑等多元題材，絕對讓你大呼過癮！ #尋路娛樂</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 尋路娛樂</p>
+                    <p><strong>觀看次數:</strong> 523</p>
+                    <p><strong>影片時長:</strong> 8分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Q7gdndCCd1c" id="一口氣_古裝_video_46" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分古裝韓劇《王后傘下》韓版“甄嬛傳”，看王后如何鬥志惡婆婆！！？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 736</p>
+                    <p><strong>影片時長:</strong> 1小時9分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=obn_B_fKvYI" id="一口氣_古裝_video_47" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列！ 小保安竟然是集團流落在外的小少爺,也是狐仙集團的救命恩人,各位狐狸美女為報恩爭先恐後的靠近他,但危險卻也隨之而來！💕#重生#穿越#爽劇#古裝#甜寵丨YY劇場</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> YY劇場</p>
+                    <p><strong>觀看次數:</strong> 1,619</p>
+                    <p><strong>影片時長:</strong> 1小時12分7秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=kCMviZxQvro" id="一口氣_古裝_video_48" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《短劇 ·小公子哪里逃》丨古裝版我的野蠻女友~#動漫 #短劇 #大宋制片厂</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 逆水寒大宋製片廠</p>
+                    <p><strong>觀看次數:</strong> 4,934</p>
+                    <p><strong>影片時長:</strong> 20分35秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=WizSyg3sXBw" id="一口氣_古裝_video_49" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">鬼殺人有多驚悚？一口氣讀完古裝懸疑《吉祥紋蓮花樓》原著小說之碧窗有鬼殺人事件！｜Puckio懸疑系列</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小說家Puckio</p>
+                    <p><strong>觀看次數:</strong> 1,336</p>
+                    <p><strong>影片時長:</strong> 31分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=qB_f0shwCNA" id="一口氣_古裝_video_50" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完古裝探案劇《神探狄仁傑1》上！元芳不過出了個外勤，結果卻被全面通緝，所幸被狄胖胖救下！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 无名剧场</p>
+                    <p><strong>觀看次數:</strong> 4,691</p>
+                    <p><strong>影片時長:</strong> 1小時14分50秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=PQKibS3Heis" id="一口氣_古裝_video_51" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列！醫妃魂穿不受寵王妃,狗王爺寵妾滅妻每日挖肉做藥引子給小妾治病,她轉身嫁皇叔,沒想到她竟是皇叔心心念念3年的白月光, 登上寶座也只獨寵她一人！💕#重生#穿越#爽劇#古裝#甜寵丨YY劇場</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> YY劇場</p>
+                    <p><strong>觀看次數:</strong> 5,269</p>
+                    <p><strong>影片時長:</strong> 2小時8分49秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=atSalmR-xl4" id="一口氣_古裝_video_52" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">2023古裝愛情奇幻劇《護心》一口氣看完，侯明昊、周也龍主第一次愛上別人，就陷入了無間地獄，身體被肢解散落到四面八方！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 神居娱乐</p>
+                    <p><strong>觀看次數:</strong> 2,930</p>
+                    <p><strong>影片時長:</strong> 38分41秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=1RcCL8Ive3U" id="一口氣_古裝_video_53" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完系列！單純小夥勇闖大城市,前有風韻猶存老闆娘,後有性感嫵媚女房東,他卻只有不能滿足他的女友,他深陷絕頂身材無法自拔夜夜洗冷水澡 ！💕#重生#穿越#爽劇#古裝#甜寵丨YY劇場</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> YY劇場</p>
+                    <p><strong>觀看次數:</strong> 29,589</p>
+                    <p><strong>影片時長:</strong> 1小時58分53秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=L-gjX3DoeK0" id="一口氣_古裝_video_54" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            </div>
+        </div>
+        <div class="keywords-section" id="一口氣_仙俠">
+            <h2>關鍵字: 一口氣 仙俠</h2>
+            <p>找到 18 部影片</p>
+            <div class="video-list">
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分仙俠劇《三千鴉殺》大驪國帝姬國破後，用侍女的身份開啟復仇！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 677</p>
+                    <p><strong>影片時長:</strong> 47分34秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=7-BrpLZ83vc" id="一口氣_仙俠_video_1" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">史上最虐心仙俠劇！楊紫X成毅：又蘇又虐的愛戀，誰能頂得住？一口氣看完《沉香如屑》！#《沉香如屑》#楊紫#成毅#張睿#孟子義#朱泳騰#徐愷嚀#李欣澤#韓承羽#傅方俊#李彧#朱麗嵐#沈曉海#林源#葉晞月#</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 太阳说</p>
+                    <p><strong>觀看次數:</strong> 153,598</p>
+                    <p><strong>影片時長:</strong> 48分7秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=7PUOf944ink" id="一口氣_仙俠_video_2" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完经典仙侠剧《仙劍奇俠傳 1-3合集 》仙俠劇的巔峰！！！無胡歌、無仙劍！！！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 渝翰林</p>
+                    <p><strong>觀看次數:</strong> 139,005</p>
+                    <p><strong>影片時長:</strong> 4小時33分53秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=OvnXLltQ_l4" id="一口氣_仙俠_video_3" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【長月燼明】完整版1~40集，全集電視劇解說，神魔仙俠相愛相殺，分分合合，結局要有幾次虐才行？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 愛追劇Love chasing short dramas</p>
+                    <p><strong>觀看次數:</strong> 735</p>
+                    <p><strong>影片時長:</strong> 2小時55分56秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=of2bpbFXc9Y" id="一口氣_仙俠_video_4" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">2024將開播的15部仙俠劇！一口氣看到爽！附上看點+獨家素材！除了純正的仙俠派，以愛情為核心的偶像派，還解鎖了全新的探索修仙之道的修仙派！最後四部必將霸屏，絕對不容錯過！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 月亮說</p>
+                    <p><strong>觀看次數:</strong> 46,817</p>
+                    <p><strong>影片時長:</strong> 15分40秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=21WwqLhmmPE" id="一口氣_仙俠_video_5" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">9.6高分虐戀，成毅、袁冰妍，演繹仙俠絕戀！仙俠巔峰之作！一口氣看完《琉璃》！#成毅#袁冰妍#劉學義#張予曦#白澍#侯夢瑤#李俊逸#周峻緯#韓承羽#朱梓驍#傅方俊#何中華#姚奕辰#</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 太阳说</p>
+                    <p><strong>觀看次數:</strong> 1,662</p>
+                    <p><strong>影片時長:</strong> 38分49秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=PyVye6kMB-s" id="一口氣_仙俠_video_6" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看爽！！】🔥《凡人修仙：開局獲得三畝靈田》💥懷揣神秘三畝靈田穿越神秘浩瀚的仙俠世界中，幸得二叔引入仙途，成為萬千散修之一。而仙道好入，唯有迎難而上，百般磨煉才能仙道長青！ #uu剧场 #穿越</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> UU剧场</p>
+                    <p><strong>觀看次數:</strong> 26,288</p>
+                    <p><strong>影片時長:</strong> 78小時2分4秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=KfdD90MTt0M" id="一口氣_仙俠_video_7" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完！【雙株訣】一株雙生的太歲，一陰一陽若能逆轉陰陽力量無窮，從此二者反目成仇，不死不休，爭鬥不止，誰能真正笑到最後#上癮劇場 #短劇推薦 #古裝 #仙俠</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 上癮劇場</p>
+                    <p><strong>觀看次數:</strong> 1,983</p>
+                    <p><strong>影片時長:</strong> 1小時40分41秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=NqRRLvvmryE" id="一口氣_仙俠_video_8" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完【忘羨】《仙門情仇「藏魏傳奇」》第一集：藏色散人池惠、魏長澤與仙門百家之間的恩怨情仇，展現了一個充滿奇幻與愛恨的仙俠世界~</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 忘羡成真</p>
+                    <p><strong>觀看次數:</strong> 1,151</p>
+                    <p><strong>影片時長:</strong> 2小時56分12秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=mKNkXs5xbmA" id="一口氣_仙俠_video_9" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完ai漫畫小說 - 老來修仙 #小朵聽漫 #ai漫畫小說 #一口氣看完 #老來修仙 #仙俠 #修真 #小朵聽漫</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小朵聽漫</p>
+                    <p><strong>觀看次數:</strong> 904</p>
+                    <p><strong>影片時長:</strong> 15秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/rJCNezjq1hE" id="一口氣_仙俠_video_10" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《龍怒》全集丨仙俠女強爽劇。#動漫 #短劇 #大宋制片厂</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 逆水寒大宋製片廠</p>
+                    <p><strong>觀看次數:</strong> 1,004</p>
+                    <p><strong>影片時長:</strong> 22分43秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=WBi-hRqBjPg" id="一口氣_仙俠_video_11" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分仙俠愛情劇《長相思》四個男神同時愛上一個女孩，最後女孩該如何選擇？？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 688</p>
+                    <p><strong>影片時長:</strong> 1小時7分22秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=qlIEbIbFRT0" id="一口氣_仙俠_video_12" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">《扶云》我和閨蜜一起穿進仙俠文。我穿成了將被殺妻正道的那個妻，她穿成了將被挖靈丹抽仙骨的爐鼎。我跟她都得死在男人手裡，我們魂飛魄散，男人度過情劫，得道成仙。#完結文 #一口氣看完 #小說 #爽文</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 衝浪小說</p>
+                    <p><strong>觀看次數:</strong> 3,882</p>
+                    <p><strong>影片時長:</strong> 27分33秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=bLCRjXxnOKk" id="一口氣_仙俠_video_13" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【一口氣看完】高分仙俠劇《蒼蘭訣》魔尊為愛長出情絲，小花妖竟然有雙重身份？？</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 1,295</p>
+                    <p><strong>影片時長:</strong> 1小時22分29秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=EpHlWl6OVtk" id="一口氣_仙俠_video_14" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完2023年36部好評短劇！雖然小成本制作，但絕對是S+級的爽感！像是《成曦曲》《東欄雪》等頻繁上微博熱搜！現代、古裝、奇幻、穿越、仙俠等多部破億次觀看！小編很佩服有幾部的劇情實在牛！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 月亮說</p>
+                    <p><strong>觀看次數:</strong> 380,078</p>
+                    <p><strong>影片時長:</strong> 26分12秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=s2UWXqgk-Fg" id="一口氣_仙俠_video_15" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">一口氣看完《女媧傳說之靈珠》上集！歷史小白誤闖仙俠世界，上演狗血替身文學！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 笨兔子没空</p>
+                    <p><strong>觀看次數:</strong> 504</p>
+                    <p><strong>影片時長:</strong> 31分12秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=LIN6tOOPS6o" id="一口氣_仙俠_video_16" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">仙俠/魔尊/爽文《一口氣看完系列》我是仙界金饭碗，被派下凡历劫，攻略魔尊，可魔尊怎么投胎成了一对同胞娃娃，成天对着我傻笑…… #搞笑 #推文</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 果果小說</p>
+                    <p><strong>觀看次數:</strong> 630</p>
+                    <p><strong>影片時長:</strong> 30分8秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=8RP7y2BuCyg" id="一口氣_仙俠_video_17" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">大雄穿越到仙俠世界，還沒成仙差點掛了！一口氣看完《哆啦A夢》5個故事：輕鬆成仙課程，在雲中散步，痛苦反射鏡，胖虎是熊貓，細細長長的朋友#哆啦a夢</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鹿目米粒儿动漫</p>
+                    <p><strong>觀看次數:</strong> 16,121</p>
+                    <p><strong>影片時長:</strong> 16分48秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=7Ctfaw47Rig" id="一口氣_仙俠_video_18" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            </div>
+        </div>
+        <div class="keywords-section" id="說劇">
+            <h2>關鍵字: 說劇</h2>
+            <p>找到 37 部影片</p>
+            <div class="video-list">
+            <div class="video-card">
+                <h3 class="video-title">誰說劇沒番外的，他們四個一合體就有了～#丁禹兮 #祝緒丹 #楊仕澤 #星光大賞 #永夜星河</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 小新聊娱</p>
+                    <p><strong>觀看次數:</strong> 9,170</p>
+                    <p><strong>影片時長:</strong> 51秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/NeLxKlY6GFI" id="說劇_video_1" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">婆婆不喜歡兒媳給她下毒 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 1,119</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/yOCupbLY9O4" id="說劇_video_2" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">蛇蝎美人小師姐，笑翻全場 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 4,186</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/4wwCeAe08JI" id="說劇_video_3" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【恩靜說劇】美好世界3，妻子尾隨丈夫來到酒店，發現他外面有個小情人</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 恩靜說劇</p>
+                    <p><strong>觀看次數:</strong> 8,115</p>
+                    <p><strong>影片時長:</strong> 21分30秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ZnM44M-1WFk" id="說劇_video_4" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">黑心保姆虐待孩子 欺騙主人 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 571</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/HB83u-8fP_Y" id="說劇_video_5" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">這個世界沒有色彩 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 17,233</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/LSNDrhK8heM" id="說劇_video_6" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">老板假裝乞丐試探員工 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 755</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/SrblpmpzXWk" id="說劇_video_7" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">男人學魔術是為了犯罪 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 10,326</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/36-kYbJQUEk" id="說劇_video_8" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">收養的雙胞胎居然是惡魔 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 527</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/u6eKpSYDxLY" id="說劇_video_9" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">收養的男孩成為橄欖球巨星 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 10,601</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/KaV_QTtH1Us" id="說劇_video_10" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】 鏡像雙胞胎遭遇綁架，綁匪不怕員警，不怕跟蹤，還不要贖金？S1 EP5#犯罪心理1##美剧##犯罪##剧情##悬疑##影视#</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 1,296</p>
+                    <p><strong>影片時長:</strong> 11分19秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=FyVnLkQN5Mk" id="說劇_video_11" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">美女設局偷走20億寶石 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 7,631</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/QzWuNmwioAs" id="說劇_video_12" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">桂林頭號女狠人#大案紀實 #柳一手說劇 #案件 #探案 #懸案 #懸疑</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 柳一手說劇</p>
+                    <p><strong>觀看次數:</strong> 607</p>
+                    <p><strong>影片時長:</strong> 8分43秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=3S-_IvCy_l8" id="說劇_video_13" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">媽的，我只是想說劇🌞</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 鱼鱼</p>
+                    <p><strong>觀看次數:</strong> 2,336</p>
+                    <p><strong>影片時長:</strong> 25秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/JaMLVaW7y4w" id="說劇_video_14" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">[說劇小妹]頂樓EP01:今年最火爆的復仇大戲||2020</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 說劇小妹-drama</p>
+                    <p><strong>觀看次數:</strong> 10,711</p>
+                    <p><strong>影片時長:</strong> 2分11秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=KaR-3V8IrMM" id="說劇_video_15" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】【哈林教父EP05】在黑幫混玩的就是心跳，火拼現場誰也討不到好#美劇#哈林教父#美國黑幫#犯罪#劇情#</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 1,589</p>
+                    <p><strong>影片時長:</strong> 10分14秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=UihMsOYfjEA" id="說劇_video_16" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">[說劇小妹]頂樓EP04:复仇大戏拉开序幕|2020</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 說劇小妹-drama</p>
+                    <p><strong>觀看次數:</strong> 2,261</p>
+                    <p><strong>影片時長:</strong> 2分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9lbUPv1UYu4" id="說劇_video_17" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">[說劇小妹]頂樓EP12:善良的人狠起来，让你想想不到。|2020</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 說劇小妹-drama</p>
+                    <p><strong>觀看次數:</strong> 8,051</p>
+                    <p><strong>影片時長:</strong> 2分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=4k4P2nt9T38" id="說劇_video_18" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【恩靜說劇】美好世界2，兒子被撞亡故司機卻判無罪，女人用自己方式為兒復仇</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 恩靜說劇</p>
+                    <p><strong>觀看次數:</strong> 12,507</p>
+                    <p><strong>影片時長:</strong> 21分48秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=X7lDGfp0e6A" id="說劇_video_19" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">劉亦菲[2014.03.23]說劇實話：天龍八部(下)(1)</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> watchyifei</p>
+                    <p><strong>觀看次數:</strong> 867</p>
+                    <p><strong>影片時長:</strong> 13分26秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=r002eHpmM1o" id="說劇_video_20" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">[說劇小妹]頂樓EP05:富豪的世界太精彩，只有你想不到，沒做他們做不到|2020</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 說劇小妹-drama</p>
+                    <p><strong>觀看次數:</strong> 4,886</p>
+                    <p><strong>影片時長:</strong> 2分25秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=5J97EiDZ9zA" id="說劇_video_21" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">劉亦菲[2014.04.11]說劇實話：神鵰俠侶(下)(1)</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> watchyifei</p>
+                    <p><strong>觀看次數:</strong> 838</p>
+                    <p><strong>影片時長:</strong> 12分53秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=gzDEn3E1Alk" id="說劇_video_22" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【靈宵・藝館】直播室 - 重說劇系列 創作部成員大公開！</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 靈宵頻道xiqu hk</p>
+                    <p><strong>觀看次數:</strong> 1,284</p>
+                    <p><strong>影片時長:</strong> 3分59秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=1TtLbcSzlP4" id="說劇_video_23" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">機器人有意識想當家作主 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 2,058</p>
+                    <p><strong>影片時長:</strong> 57秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/0TFvoFwm5MY" id="說劇_video_24" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">劉亦菲[2014.03.23]說劇實話：天龍八部(上)(1)</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> watchyifei</p>
+                    <p><strong>觀看次數:</strong> 1,460</p>
+                    <p><strong>影片時長:</strong> 13分30秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Ckcb1ctd4UI" id="說劇_video_25" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">女孩戶外創作，卻慘遭不幸 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 1,364</p>
+                    <p><strong>影片時長:</strong> 1分</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/8Z9XPKuC6aQ" id="說劇_video_26" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】 心理側寫太給力！不愧是最強懸疑美劇S1 EP1</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 1,283</p>
+                    <p><strong>影片時長:</strong> 11分11秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=zrepYhqgTt8" id="說劇_video_27" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">《花遊記》收視率節節攀升，說說劇中大有來頭的7個配角們</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> NEWS TW</p>
+                    <p><strong>觀看次數:</strong> 2,676</p>
+                    <p><strong>影片時長:</strong> 9分32秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=wK6DmZ3XlU8" id="說劇_video_28" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">劉亦菲[2014.03.23]說劇實話：天龍八部(下)(2)</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> watchyifei</p>
+                    <p><strong>觀看次數:</strong> 538</p>
+                    <p><strong>影片時長:</strong> 11分46秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=cI5k_lUHeHk" id="說劇_video_29" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】【哈林教父S2EP03】警長挑釁黑幫老大小女兒，還沒到第二天家人就全被綁架！#美劇#哈林教父2#義大利黑手黨#兄弟情#The Godfather of Harlem#聯邦調查局</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 1,902</p>
+                    <p><strong>影片時長:</strong> 10分2秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=Jr5MCWyKeyI" id="說劇_video_30" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">真實事件改編，花季少女網戀被騙 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 1,041</p>
+                    <p><strong>影片時長:</strong> 6分34秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=nbdtxKDOydM" id="說劇_video_31" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">老J說劇帶你一起看警匪電視劇——善始善終</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 老J说剧</p>
+                    <p><strong>觀看次數:</strong> 5,186</p>
+                    <p><strong>影片時長:</strong> 1小時53分13秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=hr3dAVkuvm0" id="說劇_video_32" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">#深宮曲 深宮曲說劇-沈容兒-1｜全字幕｜全配音｜</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 伊唯</p>
+                    <p><strong>觀看次數:</strong> 1,224</p>
+                    <p><strong>影片時長:</strong> 1分16秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=2xGWvIxt4AQ" id="說劇_video_33" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">真實故事改編，女孩被囚禁7年 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 1,372</p>
+                    <p><strong>影片時長:</strong> 8分51秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=hTbgWOrvNSc" id="說劇_video_34" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】【哈林教父S2EP01】白人女兒愛上黑人小夥，有情人卻終陰陽兩隔！#美劇#哈林教父2#義大利黑手黨#兄弟情#The Godfather of Harlem#聯邦調查局</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 3,618</p>
+                    <p><strong>影片時長:</strong> 10分</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=nWflGSw2sg8" id="說劇_video_35" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">【媚媚說劇】克洛伊抱怨路西法玩失蹤 但他的翅膀一直保護著她《路西法第六季》S06EP08#犯罪#生活#懸疑#劇情#路西法第六季</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 媚媚說劇</p>
+                    <p><strong>觀看次數:</strong> 506</p>
+                    <p><strong>影片時長:</strong> 10分47秒</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=9LmcMK7HGIM" id="說劇_video_36" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            <div class="video-card">
+                <h3 class="video-title">女生坐公交車被搶劫 #雨神說劇 #電影解說 #電影 #影視解說 #影視</h3>
+                <div class="video-details">
+                    <p><strong>頻道:</strong> 雨神說劇</p>
+                    <p><strong>觀看次數:</strong> 1,051</p>
+                    <p><strong>影片時長:</strong> 59秒</p>
+                </div>
+                <a href="https://www.youtube.com/shorts/Nuiw-8MQF1U" id="說劇_video_37" class="link-button" target="_blank" onclick="markAsVisited(this)">開啟影片</a>
+            </div>
+            </div>
+        </div>
+    <script>
+    // 页面加载时恢复已访问链接的状态
+    document.addEventListener('DOMContentLoaded', function() {
+        // 从本地存储读取已访问链接
+        const visitedLinks = JSON.parse(localStorage.getItem('visitedYouTubeLinks') || '{}');
+        
+        // 遍历所有链接并标记已访问的链接
+        document.querySelectorAll('.link-button').forEach(link => {
+            if (visitedLinks[link.href]) {
+                link.classList.add('visited');
+                link.textContent = '已觀看';
+                link.removeAttribute('onclick');
+                link.removeAttribute('target');
+            }
+        });
+    });
+
+    function markAsVisited(link) {
+        // 获取当前已访问链接
+        const visitedLinks = JSON.parse(localStorage.getItem('visitedYouTubeLinks') || '{}');
+        
+        // 标记这个链接为已访问
+        visitedLinks[link.href] = true;
+        
+        // 保存到本地存储
+        localStorage.setItem('visitedYouTubeLinks', JSON.stringify(visitedLinks));
+        
+        // 立即更新链接样式
+        link.classList.add('visited');
+        link.textContent = '已觀看';
+        link.removeAttribute('onclick');
+        link.removeAttribute('target');
+    }
+
+    // 清除访问记录的函数（可选）
+    function clearVisitedLinks() {
+        localStorage.removeItem('visitedYouTubeLinks');
+        location.reload();
+    }
+    </script>
+    </body>
+</html>
